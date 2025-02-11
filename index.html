@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 클릭 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .game-container {
+            text-align: center;
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .score {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .click-btn {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .click-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>클릭 게임</h1>
+        <p class="score">점수: <span id="score">0</span></p>
+        <button class="click-btn" id="clickButton">클릭하세요!</button>
+    </div>
+
+    <script>
+        let score = 0;
+
+        document.getElementById("clickButton").addEventListener("click", function() {
+            score++;
+            document.getElementById("score").textContent = score;
+        });
+    </script>
+</body>
+</html>
